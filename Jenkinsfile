@@ -7,6 +7,12 @@ pipeline {
                 git url: 'https://github.com/Bathulabalaji/voting-app-nodejs', branch: 'main'
             }
         }
+        stage('Build') {
+            steps {
+                echo "Code has been checked out!"
+                bat 'node server.js'
+            }
+        }
     }
 
     post {
