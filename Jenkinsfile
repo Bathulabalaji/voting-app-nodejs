@@ -17,7 +17,8 @@ pipeline {
 
     post {
         always {
-            echo 'Build finished'
+            //echo 'Build finished'
+            emailext body: 'build completed', subject: 'Jenkins new file building', to: 'bathulabalaji04@gmail.com'
         }
     }
 }
